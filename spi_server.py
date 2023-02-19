@@ -1,18 +1,3 @@
-# Simple SPI server for RPi and Decawave DW1000
-# Copyright (c) Jeremy P Bentham 2019. See iosoft.blog for details
-
-# To enable SPI1, add dtoverlay=spi1-3cs to /boot/config.txt
-# Connector pin numbers:
-#       SPI0        SPI1
-# GND   25          34
-# CS    24 (CE0)    36 (CE2)
-# MOSI  19          38
-# MISO  21          35
-# CLK   23          40
-# IRQ   18          32
-# RESET 22 (BCM25)  37 (BCM26)
-# NRST  16 (BCM23)  31 (BCM6)
-
 import sys, socket, time, select, spidev, RPi.GPIO as GPIO
 
 VERSION = "0.13"
